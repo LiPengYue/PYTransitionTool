@@ -29,7 +29,7 @@
 // 三、在dismiss的时候，其实是拿不到toView的（这时候其实相当于是b-》a，用枚举记录区分一下就好）
  可以用toVC.view
 
-// 四、在present的时候，不能用toVC.View表示toView，因为这之间有个动画的时间差，会出问题的老铁
+// 四、在present的时候，不能用toVC.View表示toView，会出问题的老铁
  */
 
 
