@@ -8,7 +8,7 @@
 
 #import "Animatr.h"
 #import "AnimatedTransition.h"
-#import "PYPresentationController.h"
+
 
 @interface Animatr ()
 //MARK: ---------------------- dismiss & present ------------------------
@@ -21,7 +21,7 @@
 /**containerView*/
 @property (nonatomic,copy) void(^setupContainerViewBlock)(UIView *containerView);
 
-/**animatedTransition 动画执行者*/
+/**非交互式 转场动画执行者*/
 @property (nonatomic,strong) AnimatedTransition *animatedTransition;
 @end
 
@@ -29,10 +29,28 @@
 
 @implementation Animatr
 
++ (instancetype)animatrWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle{
+    return [[self alloc]initWithModalPresentationStyle:modalPresentationStyle];
+}
+- (instancetype)initWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle{
+    if (self = [super init]) {
+        self.modalPresentationStyle = modalPresentationStyle;
+    }
+    return self;
+}
+
+
+
+
 - (void)setIsAccomplishAnima:(BOOL)isAccomplishAnima {
     _isAccomplishAnima = isAccomplishAnima;
     self.animatedTransition.isAccomplishAnima = isAccomplishAnima;
 }
+- (void)setModalPresentationStyle:(UIModalPresentationStyle)modalPresentationStyle {
+    _modalPresentationStyle = modalPresentationStyle;
+    self.animatedTransition.modalPresentationStyle = modalPresentationStyle;
+}
+
 //MARK: --------------- 懒加载 -----------------------
 - (AnimatedTransition *)animatedTransition {
     if (!_animatedTransition) {
@@ -40,6 +58,8 @@
     }
     return _animatedTransition;
 }
+
+
 
 //MAKR: --------------- dismiss & present 方法实现 ------------------
 - (void)presentAnimaWithBlock:(void (^)(UIViewController *, UIViewController *, UIView *, UIView *))presentAnimaBlock {
@@ -54,16 +74,6 @@
 //MARK: ---------------------- setupContainerView ------------------------
 - (void)setupContainerViewWithBlock: (void(^)(UIView *containerView))setupContainerViewBlock{
     self.setupContainerViewBlock = setupContainerViewBlock;
-}
-
-
-//MARK: ----------------- presentationController --------------------------
-//如果内部改变了toview的frame 那么在做动画的时候会出现问题
-/////内部对fromVC与toVC进行了UI界面的布局 (1.先走这个方法)
-- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
-{
-    PYPresentationController * presentationController = [[PYPresentationController alloc]initWithPresentedViewController:presented presentingViewController:presenting];    
-    return presentationController;
 }
 
 
@@ -115,6 +125,7 @@
 ////MARK: -------------------- 3 -------------------
 ////交互类型的动画
 -(id< UIViewControllerInteractiveTransitioning >)interactionControllerForPresentation:(id < UIViewControllerAnimatedTransitioning >)animator{
+
     
     return nil;
 }

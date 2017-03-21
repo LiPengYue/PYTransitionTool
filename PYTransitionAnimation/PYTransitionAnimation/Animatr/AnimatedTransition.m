@@ -78,8 +78,9 @@
     UIView *toView = [transitionContext viewForKey:(UITransitionContextToViewKey)];
 
     UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    // 这里有坑：看（下面的）坑1，
     //[contentView addSubview:fromView];
-    [contentView addSubview:toView];
+//    [contentView addSubview:toView];
     
     //4. contentView 设置蒙版 (这里是灰色的蒙版)
     contentView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.5];
@@ -100,6 +101,7 @@
 //            [transitionContext completeTransition:YES];
 //        }];
 //    }
+    
     //4. contentView 设置蒙版
     if (self.setupContainerViewBlock) {
         self.setupContainerViewBlock(contentView);
@@ -109,6 +111,7 @@
     switch (self.animatedTransitionType) {
         case AnimatedTransitionType_Present:{
             if (self.presentAnimaBlock){
+                [contentView addSubview:toView];
                 self.presentAnimaBlock(toVC,fromVC,toView,fromView);
             }
         }
@@ -116,6 +119,10 @@
         case AnimatedTransitionType_Dismiss:{
             if (!toView) toView = toVC.view;//如果没有toView 那么就用toVC.View
             if (self.dismissAnimaBlock) {
+                //这里有坑，看下面的坑1
+                if (self.modalPresentationStyle != UIModalPresentationCustom){
+                    [contentView addSubview:toView];
+                }
                 self.dismissAnimaBlock(toVC,fromVC,toView,fromView);
             }
         }
@@ -138,6 +145,17 @@
 //    }
 }
 
-
+// ------------------------- 关于一些坑：-----------------------------------
+/**
+ 我的简书：《iOS CAAnimation之CATransition（自定义转场动画）》
+ http://www.jianshu.com/p/fb0d6b0f8008
+ 
+ //坑1. dismiss后黑屏了？？？
+ Custom 模式：presentation 结束后，presentingView(fromView) 未被主动移出视图结构，在 dismissal 中，注意不要像其他转场中那样将 presentingView(toView) 加入 containerView 中，否则 dismissal 结束后本来可见的 presentingView 将会随着 containerView 一起被移除。如果你在 Custom 模式下没有注意到这点，很容易出现黑屏之类的现象而不知道问题所在。
+ 在 Custom 模式下的dismissal 转场（在present中要添加）中不要像其他的转场那样将 toView(presentingView) 加入 containerView，否则 presentingView 将消失不见，而应用则也很可能假死。而 FullScreen 模式下可以使用与前面的容器类 VC 转场同样的代码。因此，上一节里示范的 Slide 动画控制器不适合在 Custom 模式下使用，放心好了，Demo 里适配好了，具体的处理措施，请看下一节的处理
+ 
+ //坑2. dismiss时 toView为nil
+ iOS 8 为<UIViewControllerContextTransitioning>协议添加了viewForKey:方法以方便获取 fromView 和 toView，但是在 Modal 转场里要注意：在 Custom 模式下通过viewForKey:方法来获取 presentingView 得到的是 nil，必须通过viewControllerForKey:得到 presentingVC 后来间接获取，FullScreen 模式下没有这个问题。(原来这里没有限定是在 Custom 模式，导致 @JiongXing 浪费了些时间，抱歉)。因此在 Modal 转场中，较稳妥的方法是从 fromVC 和 toVC 中获取 fromView 和 toView。
+ */
 
 @end

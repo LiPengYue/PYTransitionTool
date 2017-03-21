@@ -16,6 +16,9 @@ typedef enum
 } AnimatedTransitionType;
 
 @interface AnimatedTransition : NSObject <UIViewControllerAnimatedTransitioning>
+/**这是属性一定要设置，否则看 上面解释的“坑1”*/
+@property (nonatomic,assign) UIModalPresentationStyle modalPresentationStyle;
+
 //MARK:  -------------------- 动画时长 和类型 ------------------------
 /** present动画时长*/
 @property (nonatomic,assign) CGFloat presentDuration;

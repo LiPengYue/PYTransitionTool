@@ -13,10 +13,9 @@
 		86E988F81E764D6B00BF36DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E988F61E764D6B00BF36DE /* Main.storyboard */; };
 		86E988FA1E764D6B00BF36DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E988F91E764D6B00BF36DE /* Assets.xcassets */; };
 		86E988FD1E764D6B00BF36DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E988FB1E764D6B00BF36DE /* LaunchScreen.storyboard */; };
-		86E989071E76780700BF36DE /* Animatr.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E989061E76780700BF36DE /* Animatr.m */; };
-		86E9890A1E767C7E00BF36DE /* AnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E989091E767C7E00BF36DE /* AnimatedTransition.m */; };
 		86EFA62C1E7A20B3004EFACE /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA62B1E7A20B3004EFACE /* PushViewController.m */; };
-		86EFA62F1E7A2835004EFACE /* PYPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA62E1E7A2835004EFACE /* PYPresentationController.m */; };
+		86FEE8A51E812A0E00C87B7B /* AnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FEE8A21E812A0E00C87B7B /* AnimatedTransition.m */; };
+		86FEE8A61E812A0E00C87B7B /* Animatr.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FEE8A41E812A0E00C87B7B /* Animatr.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +29,12 @@
 		86E988F91E764D6B00BF36DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E988FC1E764D6B00BF36DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86E988FE1E764D6B00BF36DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86E989051E76780700BF36DE /* Animatr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animatr.h; sourceTree = "<group>"; };
-		86E989061E76780700BF36DE /* Animatr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animatr.m; sourceTree = "<group>"; };
-		86E989081E767C7E00BF36DE /* AnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransition.h; sourceTree = "<group>"; };
-		86E989091E767C7E00BF36DE /* AnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransition.m; sourceTree = "<group>"; };
 		86EFA62A1E7A20B3004EFACE /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		86EFA62B1E7A20B3004EFACE /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		86EFA62D1E7A2835004EFACE /* PYPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPresentationController.h; sourceTree = "<group>"; };
-		86EFA62E1E7A2835004EFACE /* PYPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPresentationController.m; sourceTree = "<group>"; };
+		86FEE8A11E812A0E00C87B7B /* AnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransition.h; sourceTree = "<group>"; };
+		86FEE8A21E812A0E00C87B7B /* AnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransition.m; sourceTree = "<group>"; };
+		86FEE8A31E812A0E00C87B7B /* Animatr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animatr.h; sourceTree = "<group>"; };
+		86FEE8A41E812A0E00C87B7B /* Animatr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animatr.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +94,10 @@
 		86E989041E7677F300BF36DE /* Animatr */ = {
 			isa = PBXGroup;
 			children = (
-				86E989051E76780700BF36DE /* Animatr.h */,
-				86E989061E76780700BF36DE /* Animatr.m */,
-				86EFA62D1E7A2835004EFACE /* PYPresentationController.h */,
-				86EFA62E1E7A2835004EFACE /* PYPresentationController.m */,
-				86E989081E767C7E00BF36DE /* AnimatedTransition.h */,
-				86E989091E767C7E00BF36DE /* AnimatedTransition.m */,
+				86FEE8A11E812A0E00C87B7B /* AnimatedTransition.h */,
+				86FEE8A21E812A0E00C87B7B /* AnimatedTransition.m */,
+				86FEE8A31E812A0E00C87B7B /* Animatr.h */,
+				86FEE8A41E812A0E00C87B7B /* Animatr.m */,
 			);
 			path = Animatr;
 			sourceTree = "<group>";
@@ -178,11 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E989071E76780700BF36DE /* Animatr.m in Sources */,
+				86FEE8A61E812A0E00C87B7B /* Animatr.m in Sources */,
 				86E988F51E764D6B00BF36DE /* ViewController.m in Sources */,
 				86EFA62C1E7A20B3004EFACE /* PushViewController.m in Sources */,
-				86E9890A1E767C7E00BF36DE /* AnimatedTransition.m in Sources */,
-				86EFA62F1E7A2835004EFACE /* PYPresentationController.m in Sources */,
+				86FEE8A51E812A0E00C87B7B /* AnimatedTransition.m in Sources */,
 				86E988F21E764D6B00BF36DE /* AppDelegate.m in Sources */,
 				86E988EF1E764D6B00BF36DE /* main.m in Sources */,
 			);
