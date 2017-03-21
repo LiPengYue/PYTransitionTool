@@ -121,7 +121,7 @@
             if (self.dismissAnimaBlock) {
                 //这里有坑，看下面的坑1
                 if (self.modalPresentationStyle != UIModalPresentationCustom){
-                    [contentView addSubview:toView];
+                    [contentView addSubview:fromView];
                 }
                 self.dismissAnimaBlock(toVC,fromVC,toView,fromView);
             }
