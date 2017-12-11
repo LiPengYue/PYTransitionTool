@@ -85,7 +85,7 @@
     //4. contentView 设置蒙版 (这里是灰色的蒙版)
     contentView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.5];
     
-//    //5. 动画实现 分为present动画和dismiss动画 （可以在Animatr的代理方法中区分并传进来）
+//    //5. 动画实现 分为present动画和dismiss动画 （可以在animater的代理方法中区分并传进来）
 //    if(present){
 //        [UIView animateWithDuration:0.3 animations:^{
 //            

@@ -15,7 +15,7 @@
 		86E988FD1E764D6B00BF36DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E988FB1E764D6B00BF36DE /* LaunchScreen.storyboard */; };
 		86EFA62C1E7A20B3004EFACE /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA62B1E7A20B3004EFACE /* PushViewController.m */; };
 		86FEE8A51E812A0E00C87B7B /* AnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FEE8A21E812A0E00C87B7B /* AnimatedTransition.m */; };
-		86FEE8A61E812A0E00C87B7B /* Animatr.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FEE8A41E812A0E00C87B7B /* Animatr.m */; };
+		86FEE8A61E812A0E00C87B7B /* Animater.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FEE8A41E812A0E00C87B7B /* Animater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		86EFA62B1E7A20B3004EFACE /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		86FEE8A11E812A0E00C87B7B /* AnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransition.h; sourceTree = "<group>"; };
 		86FEE8A21E812A0E00C87B7B /* AnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransition.m; sourceTree = "<group>"; };
-		86FEE8A31E812A0E00C87B7B /* Animatr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animatr.h; sourceTree = "<group>"; };
-		86FEE8A41E812A0E00C87B7B /* Animatr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animatr.m; sourceTree = "<group>"; };
+		86FEE8A31E812A0E00C87B7B /* Animater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animater.h; sourceTree = "<group>"; };
+		86FEE8A41E812A0E00C87B7B /* Animater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animater.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +96,8 @@
 			children = (
 				86FEE8A11E812A0E00C87B7B /* AnimatedTransition.h */,
 				86FEE8A21E812A0E00C87B7B /* AnimatedTransition.m */,
-				86FEE8A31E812A0E00C87B7B /* Animatr.h */,
-				86FEE8A41E812A0E00C87B7B /* Animatr.m */,
+				86FEE8A31E812A0E00C87B7B /* Animater.h */,
+				86FEE8A41E812A0E00C87B7B /* Animater.m */,
 			);
 			path = Animatr;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86FEE8A61E812A0E00C87B7B /* Animatr.m in Sources */,
+				86FEE8A61E812A0E00C87B7B /* Animater.m in Sources */,
 				86E988F51E764D6B00BF36DE /* ViewController.m in Sources */,
 				86EFA62C1E7A20B3004EFACE /* PushViewController.m in Sources */,
 				86FEE8A51E812A0E00C87B7B /* AnimatedTransition.m in Sources */,

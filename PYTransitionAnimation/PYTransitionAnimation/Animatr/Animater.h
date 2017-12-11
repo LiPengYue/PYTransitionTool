@@ -1,5 +1,5 @@
 //
-//  Animatr.h
+//  animater.h
 //  PYTransitionAnimation
 //
 //  Created by 李鹏跃 on 17/3/13.
@@ -24,7 +24,7 @@
  这个方法保证fromView才不会被移除(及可以在modal后看到a控制器的view)
  self.modalPresentationStyle = UIModalPresentationCustom;
  这个属性表示在modal、dismiss的时候会走自定义的方法
- self.transitioningDelegate = self.animatr;
+ self.transitioningDelegate = self.animater;
  
  // 二、在执行动画类（AnimatedTransition）中：在完成动画后一定要调用[transitionContext completeTransition:YES];
  最后如果不做动画完成处理，就会造成toView不能相应点击的情况，可能在执行完动画后，系统回到了主线程，一直在等待完成命令，所以没有办法执行点击事件
@@ -49,9 +49,9 @@
 
 
 
-@interface Animatr : NSObject <UIViewControllerTransitioningDelegate>
+@interface Animater : NSObject <UIViewControllerTransitioningDelegate>
 
-+ (instancetype)animatrWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle;
++ (instancetype)animaterWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle;
 - (instancetype)initWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle;
 
 /**这是属性一定要设置，否则看 上面解释的“坑1”*/

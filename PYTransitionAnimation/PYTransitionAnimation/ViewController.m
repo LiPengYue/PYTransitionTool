@@ -8,29 +8,29 @@
 
 #import "ViewController.h"
 #import "PushViewController.h"
-#import "Animatr.h"
+#import "Animater.h"
 @interface ViewController () <UIViewControllerTransitioningDelegate
 >
 @property (nonatomic,strong) UIButton *transitionButton;
 @property (nonatomic,strong) UIViewController *VC;
-@property (nonatomic,strong) Animatr *animatr;
+@property (nonatomic,strong) Animater *animater;
 @property (nonatomic, strong) id vc;
 @end
 
 
 @implementation ViewController
 
-- (Animatr *)animatr {
-    if (!_animatr) {
-        _animatr = [[Animatr alloc]init];
+- (Animater *)animater {
+    if (!_animater) {
+        _animater = [[Animater alloc]init];
     }
-    return _animatr;
+    return _animater;
 }
 
 //- (instancetype)init {
 //    if (self = [super init]) {
 //        self.modalPresentationStyle = UIModalPresentationCustom;
-//        self.transitioningDelegate = self.animatr;
+//        self.transitioningDelegate = self.animater;
 //    }
 //    return self;
 //}

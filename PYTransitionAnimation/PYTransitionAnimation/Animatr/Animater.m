@@ -1,16 +1,16 @@
 //
-//  Animatr.m
+//  animater.m
 //  PYTransitionAnimation
 //
 //  Created by 李鹏跃 on 17/3/13.
 //  Copyright © 2017年 13lipengyue. All rights reserved.
 //
 
-#import "Animatr.h"
+#import "Animater.h"
 #import "AnimatedTransition.h"
 
 
-@interface Animatr ()
+@interface Animater ()
 //MARK: ---------------------- dismiss & present ------------------------
 /**dismiss动画*/
 @property (nonatomic,copy) void(^dismissAnimaBlock)(UIViewController *toVC, UIViewController *fromeVC, UIView *toView, UIView *fromeView);
@@ -27,9 +27,9 @@
 
 
 
-@implementation Animatr
+@implementation Animater
 
-+ (instancetype)animatrWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle{
++ (instancetype)animaterWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle{
     return [[self alloc]initWithModalPresentationStyle:modalPresentationStyle];
 }
 - (instancetype)initWithModalPresentationStyle: (UIModalPresentationStyle)modalPresentationStyle{
